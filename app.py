@@ -183,7 +183,7 @@ with st.sidebar:
     st.markdown("## ⚙️ Settings")
     st.markdown("### 📄 Upload Study Material")
 
-    uploaded_pdf = st.file_uploader("Upload a PDF", type=["pdf"])
+    uploaded_pdf = st.file_uploader("Upload a PDF", type=["pdf"], key="pdf_uploader")
 
     if uploaded_pdf and uploaded_pdf.name != st.session_state.pdf_name:
         with st.spinner("📖 Reading and indexing your PDF..."):
